@@ -1,0 +1,12 @@
+# ref: https://roman-numerals.info/
+# ref: https://bit.ly/35AM3P4
+'''
+    thousand = 'M{0,3}'
+    hundred  = '(CM|CD|D?C{0,3})'
+    ten      = '(XC|XL|L?X{0,3})'
+    digits   = '(IX|IV|V?I{0,3})'
+'''
+regex_pattern = r"^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"
+
+import re
+print(str(bool(re.match(regex_pattern, input()))))
